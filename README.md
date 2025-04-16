@@ -1,13 +1,79 @@
-# Brain Tumor Detection Model
 **Convolutional Neural Network for Brain Tumor Detection and Diagnosis (Pytorch, F1-score: 0.97)**
 
 * ![](https://assets.neurosurgicalatlas.com/aaroncohen-gadol-com/patients/brain-tumor-fig1.jpg)
 
-## Why do we need this study? 
-Deep Learning has emerged as a powerful tool in the field of medical imaging and has shown great potential in aiding the health community in the detection and diagnosis of brain tumors. By leveraging deep learning algorithms, we can analyze medical images, such as MRI or CT scans, with unprecedented accuracy and efficiency. Also, it can assist in the classification of brain tumors into different subtypes. By training models on large datasets of labeled brain tumor images, deep learning algorithms can learn to distinguish between various tumor types, such as gliomas, meningiomas, or metastatic tumors. This classification capability can aid in determining the appropriate treatment approach and prognosis for patients. Overall, deep learning has the potential to revolutionize brain tumor detection and diagnosis. By leveraging the power of neural networks, we can enhance the accuracy, efficiency, and understanding of brain tumor imaging, ultimately leading to improved patient care and outcomes in the field of neuro-oncology.
+This repository provides a solution for detecting brain tumors from MRI images using Convolutional Neural Networks (CNN) in PyTorch. The goal is to classify brain tumors as either benign or malignant, which is crucial for early diagnosis and treatment.
 
-## Problem Statement
-The accurate detection and classification of Brain Tumors play a crucial role in the diagnosis and treatment planning of patients. However, manual interpretation of Medical Images, such as MRI scans, can be time-consuming and subjective, leading to potential errors and delays in patient care. Therefore, there is a need for an automated and reliable method to detect and classify brain tumors from medical images.
+## Project Contents
 
-## Study Aim
-This study aims to develop a Convolutional Neural Network (CNN) using the PyTorch framework that can accurately detect and classify Brain Tumors from MRI scans. The CNN will be trained on a large dataset of labeled brain tumor images to learn the patterns and features associated with different tumor types. The study aims to achieve high accuracy in tumor detection and classification, providing a valuable tool for healthcare professionals in the field of neuro-oncology. The ultimate goal is to improve the efficiency and accuracy of brain tumor diagnosis, enabling timely and appropriate treatment planning for patients.
+- **`LICENSE`**: Contains the license for this repository (MIT License).
+- **`Presentation.pdf`**: A presentation file that explains the model and its implementation.
+- **`README.md`**: This file, providing an overview of the project.
+- **`brain-tumor-detection-by-cnn-pytorch.ipynb`**: Jupyter notebook for implementing and training the CNN model for brain tumor detection.
+- **`cnn_model_visualization.png`**: Visualization of the architecture of the CNN model.
+- **`requirements.txt`**: Required Python libraries and dependencies for running the project.
+
+## Dataset
+
+The model is trained on a dataset of brain MRI images. The images are labeled as benign or malignant, which are used to train the deep learning model for classification.
+
+## Model Architecture
+
+The model uses a Convolutional Neural Network (CNN) with several convolutional layers followed by fully connected layers. This architecture is designed to automatically extract features from MRI images and classify them into benign or malignant categories.
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/P-Darabi/Brain-Tumor-Detection.git
+    cd Brain-Tumor-Detection
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+### Training the Model
+
+To train the model, run the following command:
+
+```bash
+python train.py --data_path /path/to/dataset --epochs 25
+```
+
+### Evaluating the Model
+
+To evaluate the model, run the following command:
+
+```bash
+python evaluate.py --model_path /path/to/trained_model.pth --test_data /path/to/test_data
+```
+
+### Jupyter Notebook
+
+You can also explore and experiment with the model in the Jupyter notebook:
+
+```bash
+jupyter notebook brain-tumor-detection-by-cnn-pytorch.ipynb
+```
+
+## Model Visualization
+
+Here is a visualization of the CNN model architecture:
+
+![CNN Model Visualization](cnn_model_visualization.png)
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
