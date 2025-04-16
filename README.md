@@ -38,25 +38,9 @@ The model uses a Convolutional Neural Network (CNN) with several convolutional l
 
 ## Usage
 
-### Training the Model
-
-To train the model, run the following command:
-
-```bash
-python train.py --data_path /path/to/dataset --epochs 25
-```
-
-### Evaluating the Model
-
-To evaluate the model, run the following command:
-
-```bash
-python evaluate.py --model_path /path/to/trained_model.pth --test_data /path/to/test_data
-```
-
 ### Jupyter Notebook
 
-You can also explore and experiment with the model in the Jupyter notebook:
+You can explore and experiment with the model in the Jupyter notebook:
 
 ```bash
 jupyter notebook brain-tumor-detection-by-cnn-pytorch.ipynb
